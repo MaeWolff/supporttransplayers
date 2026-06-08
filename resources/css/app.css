@@ -1,0 +1,24 @@
+@import 'tailwindcss' theme(static);
+@source "../../app/**/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+@theme {
+  --color-neutral-black: #202d55;
+  --color-brand-pink: #ff99cc;
+  --color-brand-blue: #a2e4fe;
+  --color-neutral-beige: #f2ede4;
+
+  --shadow-neo: 4px 4px 0 0 #202d55;
+  --shadow-neo-sm: 2px 2px 0 0 #202d55;
+}
+
+@layer components {
+  .btn-neo {
+    @apply inline-flex items-center justify-center border-2 border-neutral-black font-black uppercase tracking-wide
+           shadow-neo transition-all duration-150
+           hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-neo-sm
+           active:translate-x-1 active:translate-y-1 active:shadow-none
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-black focus-visible:ring-offset-2;
+  }
+}
