@@ -28,4 +28,32 @@
   .btn-neo {
     @apply inline-flex items-center justify-center border-2 border-neutral-black font-display font-black tracking-wide uppercase shadow-neo transition-all duration-150 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-neo-sm focus-visible:ring-2 focus-visible:ring-neutral-black focus-visible:ring-offset-2 focus-visible:outline-none active:translate-x-1 active:translate-y-1 active:shadow-none;
   }
+
+  .stp-prose h1 {
+    @apply font-display text-4xl leading-tight text-neutral-black uppercase md:text-5xl;
+  }
+
+  .stp-prose h2 {
+    @apply mt-10 font-display text-2xl leading-tight text-neutral-black uppercase md:text-3xl;
+  }
+
+  .stp-prose h3 {
+    @apply mt-6 font-sans text-xl font-bold text-neutral-black;
+  }
+
+  .stp-prose p {
+    @apply mt-4 font-sans text-base leading-relaxed text-neutral-black;
+  }
+
+  .stp-prose a {
+    @apply font-bold text-brand-blue underline-offset-2 hover:underline;
+  }
+
+  .stp-prose ul {
+    @apply mt-4 list-disc space-y-2 pl-6 font-sans text-base leading-relaxed text-neutral-black;
+  }
+
+  .stp-prose ol {
+    @apply mt-4 list-decimal space-y-2 pl-6 font-sans text-base leading-relaxed text-neutral-black;
+  }
 }

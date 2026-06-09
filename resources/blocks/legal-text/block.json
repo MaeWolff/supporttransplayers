@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "stp/legal-text",
+  "title": "Texte légal",
+  "category": "theme",
+  "icon": "media-text",
+  "keywords": ["legal", "mentions", "markdown", "prose", "texte"],
+  "description": "Contenu rédactionnel en markdown (titres, paragraphes, liens).",
+  "textdomain": "sage",
+  "attributes": {
+    "content": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "multiple": true,
+    "reusable": true
+  },
+  "render": "file:./render.php"
+}

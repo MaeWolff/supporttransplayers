@@ -63,11 +63,12 @@ app/
   blocks.php             # Enregistrement des blocks Gutenberg
   helpers.php            # stp_pll__() / stp_pll_x() — i18n
   PolylangThemeStrings.php
-  Support/               # HeroData, SupportersData
+  Support/               # HeroData, SupportersData, LegalTextData
   View/Composers/        # Données injectées dans les vues Blade
 resources/
   blocks/hero/           # Block Gutenberg → rendu Blade
   blocks/supporters/
+  blocks/legal-text/
   views/                 # layouts/, sections/, partials/
   css/app.css            # Tailwind + design tokens (@theme)
   js/editor.js           # Enregistrement des blocks (admin)
@@ -94,6 +95,9 @@ the_content() sur le front
 |-------|---------|---------------|
 | `stp/hero` | `resources/blocks/hero/` | `resources/views/sections/hero.blade.php` |
 | `stp/supporters` | `resources/blocks/supporters/` | `resources/views/sections/supporters.blade.php` |
+| `stp/legal-text` | `resources/blocks/legal-text/` | `resources/views/sections/legal-text.blade.php` → `<x-prose>` |
+
+**Page mentions légales** — template WordPress « Mentions légales » (`template-legal.blade.php`, sans page-header). Insérer le block `stp/legal-text` et rédiger en markdown (`#`, `##`, `###`, `[lien](url)`). Les liens sont rendus en gras bleu via `.stp-prose`.
 
 **Rédacteurs** — le contenu (titres, textes, boutons, logos) s’édite dans Gutenberg, bloc par bloc, page par page.
 

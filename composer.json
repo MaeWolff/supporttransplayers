@@ -40,6 +40,7 @@
   },
   "require": {
     "php": ">=8.3",
+    "league/commonmark": "^2.6",
     "roots/acorn": "^6.0"
   },
   "require-dev": {
