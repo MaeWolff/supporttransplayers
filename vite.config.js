@@ -1,6 +1,8 @@
 import { wordpressPlugin, wordpressThemeJson } from '@roots/vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
 import laravel from 'laravel-vite-plugin';
+import { basename, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 
 // Set APP_URL if it doesn't exist for Laravel Vite plugin
@@ -8,8 +10,24 @@ if (!process.env.APP_URL) {
   process.env.APP_URL = 'http://stp.local/';
 }
 
+const themeName = basename(dirname(fileURLToPath(import.meta.url)));
+const appUrl = process.env.APP_URL?.replace(/\/$/, '') || 'http://stp.local';
+
 export default defineConfig({
-  base: '/app/themes/sage/public/build/',
+  base: `/app/themes/${themeName}/public/build/`,
+  esbuild: {
+    jsx: 'automatic',
+    jsxImportSource: '@wordpress/element',
+  },
+  server: {
+    host: 'localhost',
+    cors: {
+      origin: appUrl,
+    },
+    hmr: {
+      host: 'localhost',
+    },
+  },
   plugins: [
     tailwindcss(),
     laravel({

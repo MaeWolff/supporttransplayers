@@ -9,8 +9,8 @@
     </a>
 
     <div class="flex justify-end gap-4">
-      <x-button size="sm" color="pink" active>FR</x-button>
-      <x-button size="sm" color="black">EN</x-button>
+      <x-button size="sm" color="blue" active>FR</x-button>
+      <x-button size="sm" color="beige">EN</x-button>
     </div>
   </div>
 </header>

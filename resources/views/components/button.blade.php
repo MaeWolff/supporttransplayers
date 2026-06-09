@@ -8,15 +8,16 @@
 
 @php
   $sizeClass = match ($size) {
-    'sm' => 'px-4 py-2 text-sm',
-    default => 'px-6 py-3 text-base',
+    'sm' => 'px-2 text-lg',
+    default => 'px-2 py-1 text-3xl',
   };
 
   $colorClass = $active
     ? match ($color) {
         'pink' => 'bg-brand-pink text-neutral-black',
         'blue' => 'bg-brand-blue text-neutral-black',
-        default => 'bg-neutral-black text-neutral-beige',
+        'beige' => 'bg-white text-neutral-black',
+        default => 'bg-neutral-beige text-neutral-black',
       }
     : 'bg-white text-neutral-black';
 

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "stp/hero",
+  "title": "Header",
+  "category": "theme",
+  "icon": "cover-image",
+  "keywords": ["header", "hero", "banner"],
+  "description": "Section header avec titre, description et boutons.",
+  "textdomain": "sage",
+  "attributes": {
+    "title": { "type": "string", "default": "" },
+    "description": { "type": "string", "default": "" },
+    "button1Label": { "type": "string", "default": "" },
+    "button1Url": { "type": "string", "default": "" },
+    "button1Color": { "type": "string", "default": "pink" },
+    "button2Label": { "type": "string", "default": "" },
+    "button2Url": { "type": "string", "default": "" },
+    "button2Color": { "type": "string", "default": "blue" }
+  },
+  "supports": {
+    "html": false,
+    "multiple": false,
+    "reusable": false
+  },
+  "render": "file:./render.php"
+}

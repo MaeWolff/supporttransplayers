@@ -6,10 +6,11 @@
     @php(do_action('get_header'))
     @php(wp_head())
 
+    <link rel="preload" href="{{ Vite::asset('resources/fonts/InstrumentSans-Regular.ttf') }}" as="font" type="font/ttf" crossorigin>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
 
-  <body @php(body_class('text-neutral-black'))>
+  <body @php(body_class('text-neutral-black font-sans bg-white'))>
     @php(wp_body_open())
 
     <div id="app">

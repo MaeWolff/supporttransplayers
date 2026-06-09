@@ -6,7 +6,29 @@
 
 namespace App;
 
+use App\Support\HeroData;
 use Illuminate\Support\Facades\Vite;
+
+/**
+ * Resolve a built asset URL from the Vite manifest.
+ * Used in wp-admin where cross-origin dev server modules are blocked.
+ */
+function manifest_asset_url(string $entry): ?string
+{
+    $manifestPath = get_theme_file_path('public/build/manifest.json');
+
+    if (! file_exists($manifestPath)) {
+        return null;
+    }
+
+    $manifest = json_decode((string) file_get_contents($manifestPath), true);
+
+    if (! is_array($manifest) || ! isset($manifest[$entry]['file'])) {
+        return null;
+    }
+
+    return get_theme_file_uri('public/build/'.$manifest[$entry]['file']);
+}
 
 /**
  * Inject styles into the block editor.
@@ -14,37 +36,76 @@ use Illuminate\Support\Facades\Vite;
  * @return array
  */
 add_filter('block_editor_settings_all', function ($settings) {
-    $style = Vite::asset('resources/css/editor.css');
+    try {
+        $css = Vite::content('resources/css/editor.css');
+    } catch (\Throwable) {
+        $css = null;
+    }
 
-    $settings['styles'][] = [
-        'css' => "@import url('{$style}')",
-    ];
+    if (is_string($css) && $css !== '') {
+        $settings['styles'][] = ['css' => $css];
+    } else {
+        $style = manifest_asset_url('resources/css/editor.css') ?? Vite::asset('resources/css/editor.css');
+        $settings['styles'][] = [
+            'css' => "@import url('{$style}')",
+        ];
+    }
 
     return $settings;
 });
 
 /**
- * Inject scripts into the block editor.
+ * Load block editor scripts from compiled assets (avoids Vite dev-server CORS in wp-admin).
  *
  * @return void
  */
-add_action('admin_head', function () {
-    if (! get_current_screen()?->is_block_editor()) {
-        return;
+add_action('enqueue_block_editor_assets', function () {
+    $dependencies = [
+        'wp-blocks',
+        'wp-block-editor',
+        'wp-components',
+        'wp-element',
+        'wp-i18n',
+        'wp-server-side-render',
+    ];
+
+    try {
+        $manifestDeps = json_decode(Vite::content('editor.deps.json'));
+
+        if (is_array($manifestDeps)) {
+            $dependencies = $manifestDeps;
+        }
+    } catch (\Throwable) {
+        //
     }
 
-    if (! Vite::isRunningHot()) {
-        $dependencies = json_decode(Vite::content('editor.deps.json'));
-
-        foreach ($dependencies as $dependency) {
-            if (! wp_script_is($dependency)) {
-                wp_enqueue_script($dependency);
-            }
+    foreach ($dependencies as $dependency) {
+        if (is_string($dependency) && ! wp_script_is($dependency)) {
+            wp_enqueue_script($dependency);
         }
     }
-    echo Vite::withEntryPoints([
-        'resources/js/editor.js',
-    ])->toHtml();
+
+    $script = manifest_asset_url('resources/js/editor.js') ?? Vite::asset('resources/js/editor.js');
+
+    wp_enqueue_script(
+        'sage-editor',
+        $script,
+        $dependencies,
+        null,
+        true
+    );
+
+    add_filter('script_loader_tag', function (string $tag, string $handle, string $src): string {
+        if ($handle !== 'sage-editor') {
+            return $tag;
+        }
+
+        if (str_contains($tag, 'type=')) {
+            return $tag;
+        }
+
+        return str_replace('<script ', '<script type="module" ', $tag);
+    }, 10, 3);
 });
 
 /**
@@ -64,6 +125,15 @@ add_filter('theme_file_path', function ($path, $file) {
  * @link https://core.trac.wordpress.org/ticket/61965
  */
 add_filter('should_load_separate_core_block_assets', '__return_false');
+
+/**
+ * Ensure Header block exists on front page and register blocks.
+ *
+ * @return void
+ */
+add_action('init', function () {
+    HeroData::ensureBlockOnFrontPage();
+});
 
 /**
  * Register the initial theme setup.

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('sections.hero')
+  @while(have_posts()) @php(the_post())
+    @include('partials.content-page')
+  @endwhile
 @endsection
