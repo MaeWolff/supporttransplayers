@@ -172,6 +172,18 @@ add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
 
     /**
+     * Enable the custom logo from Appearance > Customize > Site Identity.
+     *
+     * @link https://developer.wordpress.org/themes/functionality/custom-logo/
+     */
+    add_theme_support('custom-logo', [
+        'width' => 156,
+        'flex-width' => true,
+        'flex-height' => true,
+        'header-text' => ['site-title', 'site-description'],
+    ]);
+
+    /**
      * Enable post thumbnail support.
      *
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/

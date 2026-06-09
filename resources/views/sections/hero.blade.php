@@ -1,4 +1,4 @@
-<section class="stp-hero group flex h-[80dvh] flex-col items-center justify-center px-6 py-16 md:py-24">
+<section class="stp-hero group flex h-[80dvh] flex-col items-center px-6 py-16 md:py-24">
   <div class="relative z-10 mx-auto max-w-4xl text-center">
     @if ($hero['title'] ?? null)
       @php

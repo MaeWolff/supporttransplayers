@@ -1,11 +1,17 @@
 <header class="sticky top-0 z-20 bg-white">
-  <div class="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 py-4">
+  <div class="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-start px-6 py-4">
     <div aria-hidden="true"></div>
 
-    <a href="{{ home_url('/') }}" aria-label="{{ $siteName }}">
-      <div class="flex h-14 w-14 items-center justify-center border-2 border-neutral-black bg-brand-pink font-black shadow-neo">
-        LOGO
-      </div>
+    <a href="{{ home_url('/') }}" aria-label="{{ $siteName }}" class="inline-block shrink-0">
+      @if (has_custom_logo())
+        {!! wp_get_attachment_image((int) get_theme_mod('custom_logo'), 'full', false, [
+          'class' => 'w-[132px] h-auto',
+          'alt' => $siteName,
+          'decoding' => 'async',
+        ]) !!}
+      @else
+        <span class="font-display text-lg uppercase">{{ $siteName }}</span>
+      @endif
     </a>
 
     <div class="flex justify-end gap-4">
