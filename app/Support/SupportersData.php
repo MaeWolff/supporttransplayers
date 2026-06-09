@@ -21,7 +21,7 @@ class SupportersData
         return [
             'title' => filled($attributes['title'] ?? null)
                 ? (string) $attributes['title']
-                : __('They support us', 'sage'),
+                : stp_pll__('Iels nous soutiennent'),
             'supporters' => $supporters,
         ];
     }
@@ -49,7 +49,7 @@ class SupportersData
                     'url' => $url,
                     'logo' => wp_get_attachment_image($logoId, 'full', false, [
                         'class' => 'max-h-16 w-auto max-w-full object-contain',
-                        'alt' => $name !== '' ? $name : __('Logo de soutien', 'sage'),
+                        'alt' => $name !== '' ? $name : stp_pll__('Logo de soutien'),
                         'decoding' => 'async',
                         'loading' => 'lazy',
                     ]),

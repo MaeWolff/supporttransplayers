@@ -11,7 +11,7 @@
   "attributes": {
     "title": {
       "type": "string",
-      "default": "They support us"
+      "default": "Iels nous soutiennent"
     },
     "supporters": {
       "type": "array",

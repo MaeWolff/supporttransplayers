@@ -1,0 +1,309 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Support Trans Players 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/supporttransplayers\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-09T13:44:43+00:00\n"
+"PO-Revision-Date: 2026-06-09 12:00+0000\n"
+"Language: en_US\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: sage\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Support Trans Players"
+msgstr "Support Trans Players"
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://roots.io/sage/"
+msgstr "https://roots.io/sage/"
+
+#. Description of the theme
+#: style.css
+msgid "Support Trans Players is a WordPress theme for the Support Trans Players campaign."
+msgstr "Support Trans Players is a WordPress theme for the Support Trans Players campaign."
+
+#. Author of the theme
+#: style.css
+msgid "Roots"
+msgstr "Roots"
+
+#. Author URI of the theme
+#: style.css
+msgid "https://roots.io/"
+msgstr "https://roots.io/"
+
+#. translators: %1$s is replaced with the number of comments and %2$s with the post title
+#: app/View/Composers/Comments.php:25
+#, php-format
+msgctxt "comments title"
+msgid "%1$s response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Template Name of the theme
+msgid "Custom Template"
+msgstr "Custom Template"
+
+#: resources/blocks/hero/index.jsx:17
+msgid "Rose"
+msgstr "Pink"
+
+#: resources/blocks/hero/index.jsx:18
+msgid "Bleu"
+msgstr "Blue"
+
+#: resources/blocks/hero/index.jsx:19
+msgid "Beige"
+msgstr "Beige"
+
+#: resources/blocks/hero/index.jsx:20
+msgid "Default"
+msgstr "Default"
+
+#: resources/blocks/hero/index.jsx:31
+msgid "Label"
+msgstr "Label"
+
+#: resources/blocks/hero/index.jsx:36
+#: resources/blocks/supporters/index.jsx:78
+msgid "URL"
+msgstr "URL"
+
+#: resources/blocks/hero/index.jsx:42
+msgid "Couleur"
+msgstr "Color"
+
+#: resources/blocks/hero/index.jsx:57
+#: resources/blocks/supporters/index.jsx:34
+msgid "Contenu"
+msgstr "Content"
+
+#: resources/blocks/hero/index.jsx:59
+#: resources/blocks/supporters/index.jsx:36
+msgid "Titre"
+msgstr "Title"
+
+#: resources/blocks/hero/index.jsx:64
+msgid "Description"
+msgstr "Description"
+
+#: resources/blocks/hero/index.jsx:70
+msgid "Mots surlignés"
+msgstr "Highlighted words"
+
+#: resources/blocks/hero/index.jsx:71
+msgid "Saisissez les mots ou expressions à surligner en bleu, séparés par des virgules."
+msgstr "Enter the words or phrases to highlight in blue, separated by commas."
+
+#: resources/blocks/hero/index.jsx:81
+msgid "Bouton 1"
+msgstr "Button 1"
+
+#: resources/blocks/hero/index.jsx:88
+msgid "Bouton 2"
+msgstr "Button 2"
+
+#: resources/blocks/supporters/index.jsx:45
+msgid "Soutien"
+msgstr "Supporter"
+
+#: resources/blocks/supporters/index.jsx:60
+msgid "Changer le logo"
+msgstr "Change logo"
+
+#: resources/blocks/supporters/index.jsx:61
+msgid "Choisir un logo"
+msgstr "Choose logo"
+
+#: resources/blocks/supporters/index.jsx:68
+msgid "Nom"
+msgstr "Name"
+
+#: resources/blocks/supporters/index.jsx:97
+msgid "Supprimer"
+msgstr "Remove"
+
+#: resources/blocks/supporters/index.jsx:102
+msgid "Soutiens"
+msgstr "Supporters"
+
+#: resources/blocks/supporters/index.jsx:111
+msgid "Ajouter un soutien"
+msgstr "Add supporter"
+
+#: resources/blocks/hero/block.json
+msgctxt "block title"
+msgid "Header"
+msgstr "Header"
+
+#: resources/blocks/hero/block.json
+msgctxt "block keyword"
+msgid "header"
+msgstr "header"
+
+#: resources/blocks/hero/block.json
+msgctxt "block keyword"
+msgid "hero"
+msgstr "hero"
+
+#: resources/blocks/hero/block.json
+msgctxt "block keyword"
+msgid "banner"
+msgstr "banner"
+
+#: resources/blocks/hero/block.json
+msgctxt "block description"
+msgid "Section header avec titre, description et boutons."
+msgstr "Header section with title, description and buttons."
+
+#: resources/blocks/supporters/block.json
+msgctxt "block title"
+msgid "Soutiens"
+msgstr "Supporters"
+
+#: resources/blocks/supporters/block.json
+msgctxt "block keyword"
+msgid "soutiens"
+msgstr "soutiens"
+
+#: resources/blocks/supporters/block.json
+msgctxt "block keyword"
+msgid "sponsors"
+msgstr "sponsors"
+
+#: resources/blocks/supporters/block.json
+msgctxt "block keyword"
+msgid "partners"
+msgstr "partners"
+
+#: resources/blocks/supporters/block.json
+msgctxt "block keyword"
+msgid "supporters"
+msgstr "supporters"
+
+#: resources/blocks/supporters/block.json
+msgctxt "block description"
+msgid "Section « Iels nous soutiennent » avec logos depuis la médiathèque WordPress."
+msgstr "They support us section with logos from the WordPress media library."
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Red (50)"
+msgstr "Red (50)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Red (400)"
+msgstr "Red (400)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Red (500)"
+msgstr "Red (500)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Yellow (50)"
+msgstr "Yellow (50)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Yellow (400)"
+msgstr "Yellow (400)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Green (50)"
+msgstr "Green (50)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Green (400)"
+msgstr "Green (400)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Indigo (50)"
+msgstr "Indigo (50)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Indigo (400)"
+msgstr "Indigo (400)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr "White"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Neutral (Black)"
+msgstr "Neutral (Black)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Brand (Pink)"
+msgstr "Brand (Pink)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Brand (Blue)"
+msgstr "Brand (Blue)"
+
+#: public/build/assets/theme.json
+msgctxt "Color name"
+msgid "Neutral (Beige)"
+msgstr "Neutral (Beige)"
+
+#: public/build/assets/theme.json
+msgctxt "Font family name"
+msgid "sans"
+msgstr "sans"
+
+#: public/build/assets/theme.json
+msgctxt "Font family name"
+msgid "mono"
+msgstr "mono"
+
+#: public/build/assets/theme.json
+msgctxt "Font family name"
+msgid "display"
+msgstr "display"
+
+#: public/build/assets/theme.json
+msgctxt "Font size name"
+msgid "lg"
+msgstr "lg"
+
+#: public/build/assets/theme.json
+msgctxt "Font size name"
+msgid "xl"
+msgstr "xl"
+
+#: public/build/assets/theme.json
+msgctxt "Font size name"
+msgid "3xl"
+msgstr "3xl"
+
+#: public/build/assets/theme.json
+msgctxt "Font size name"
+msgid "4xl"
+msgstr "4xl"
+
+#: public/build/assets/theme.json
+msgctxt "Font size name"
+msgid "5xl"
+msgstr "5xl"
+
+#: public/build/assets/theme.json
+msgctxt "Font size name"
+msgid "7xl"
+msgstr "7xl"

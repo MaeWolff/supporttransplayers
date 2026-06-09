@@ -141,6 +141,8 @@ add_action('init', function () {
  * @return void
  */
 add_action('after_setup_theme', function () {
+    load_textdomain('sage', get_template_directory().'/resources/lang/'.determine_locale().'.mo');
+
     /**
      * Disable full-site editing support.
      *
@@ -154,7 +156,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'primary_navigation' => stp_pll__('Primary Navigation'),
     ]);
 
     /**
@@ -234,12 +236,12 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
-        'name' => __('Primary', 'sage'),
+        'name' => stp_pll__('Primary'),
         'id' => 'sidebar-primary',
     ] + $config);
 
     register_sidebar([
-        'name' => __('Footer', 'sage'),
+        'name' => stp_pll__('Footer'),
         'id' => 'sidebar-footer',
     ] + $config);
 });

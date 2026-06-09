@@ -20,6 +20,8 @@ if (! file_exists($composer = __DIR__.'/vendor/autoload.php')) {
 
 require $composer;
 
+require_once __DIR__.'/app/helpers.php';
+
 /*
 |--------------------------------------------------------------------------
 | Register The Bootloader
@@ -50,7 +52,7 @@ Application::configure()
 |
 */
 
-collect(['setup', 'filters', 'blocks'])
+collect(['setup', 'filters', 'blocks', 'PolylangThemeStrings'])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
