@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "stp/supporters",
+  "title": "Soutiens",
+  "category": "theme",
+  "icon": "groups",
+  "keywords": ["soutiens", "sponsors", "partners", "supporters"],
+  "description": "Section « Iels nous soutiennent » avec logos depuis la médiathèque WordPress.",
+  "textdomain": "sage",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "They support us"
+    },
+    "supporters": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "supports": {
+    "html": false,
+    "multiple": true,
+    "reusable": true
+  },
+  "render": "file:./render.php"
+}
