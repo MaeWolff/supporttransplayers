@@ -1,8 +1,14 @@
-<header class="mt-6 z-20 bg-white">
-  <div class="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-start px-6 py-4">
+<header class="z-20 mt-6 bg-white">
+  <div
+    class="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-start px-6 py-4"
+  >
     <div aria-hidden="true"></div>
 
-    <a href="{{ function_exists('pll_home_url') ? pll_home_url() : home_url('/') }}" aria-label="{{ $siteName }}" class="inline-block shrink-0">
+    <a
+      href="{{ function_exists('pll_home_url') ? pll_home_url() : home_url('/') }}"
+      aria-label="{{ $siteName }}"
+      class="inline-block shrink-0"
+    >
       @if (has_custom_logo())
         {!! wp_get_attachment_image((int) get_theme_mod('custom_logo'), 'full', false, [
           'class' => 'w-[132px] h-auto',

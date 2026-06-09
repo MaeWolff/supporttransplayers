@@ -1,8 +1,8 @@
 @import 'tailwindcss';
-@import 'fonts.css';
+@import './fonts.css';
 @source '../../app/**/*.php';
-@source "../**/*.blade.php";
-@source "../**/*.js";
+@source '../**/*.blade.php';
+@source '../**/*.js';
 
 @theme {
   --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
@@ -26,11 +26,6 @@
 
 @layer components {
   .btn-neo {
-    @apply inline-flex items-center justify-center border-2 border-neutral-black font-black uppercase tracking-wide
-           shadow-neo transition-all duration-150
-           hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-neo-sm
-           active:translate-x-1 active:translate-y-1 active:shadow-none
-           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-black focus-visible:ring-offset-2
-           font-display;
+    @apply inline-flex items-center justify-center border-2 border-neutral-black font-display font-black tracking-wide uppercase shadow-neo transition-all duration-150 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-neo-sm focus-visible:ring-2 focus-visible:ring-neutral-black focus-visible:ring-offset-2 focus-visible:outline-none active:translate-x-1 active:translate-y-1 active:shadow-none;
   }
 }

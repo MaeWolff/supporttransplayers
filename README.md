@@ -150,7 +150,8 @@ Le switcher FR/EN du header utilise `pll_the_languages()` (`resources/views/sect
 
 ## Conventions de contribution
 
-- **PHP** — namespace `App\`, PSR-4 ; formater avec `vendor/bin/pint` si besoin
+- **PHP** — namespace `App\`, PSR-4 ; formater avec `vendor/bin/pint` (`app/`, fichiers PHP purs)
+- **Blade / JS / CSS** — Prettier avec tri automatique des classes Tailwind : `npm run format` ou `npm run format:check`
 - **Blade** — markup et affichage ; logique métier dans `app/Support/` ou les composers
 - **CSS** — Tailwind dans `resources/css/app.css`, tokens dans le bloc `@theme`
 - **Git** — ne pas committer `node_modules/`, `vendor/`, `public/build/`

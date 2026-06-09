@@ -8,8 +8,9 @@
         $lines = preg_split('/\r\n|\r|\n/', $title) ?: [$title];
         $highlightIndex = 0;
       @endphp
-
-      <h1 class="mb-6 text-4xl font-display uppercase leading-tight text-neutral-black md:text-7xl md:leading-none">
+      <h1
+        class="mb-6 font-display text-4xl leading-tight text-neutral-black uppercase md:text-7xl md:leading-none"
+      >
         @if ($phrases === [])
           {!! nl2br(e($title)) !!}
         @else
@@ -54,7 +55,6 @@
                 $segments = $next;
               }
             @endphp
-
             @foreach ($segments as $segment)
               @if ($segment['highlight'])
                 <span class="relative inline whitespace-nowrap">
@@ -63,16 +63,18 @@
                     style="transition-delay: calc(200ms + {{ $highlightIndex }} * 120ms)"
                     aria-hidden="true"
                   ></span>
-                  <span class="relative z-10 px-0.5">{{ $segment['text'] }}</span>
+                  <span
+                    class="relative z-10 px-0.5"
+                    >{{ $segment['text'] }}</span
+                  >
                 </span>
                 @php $highlightIndex++; @endphp
               @else
                 {{ $segment['text'] }}
               @endif
             @endforeach
-
             @if (! $loop->last)
-              <br>
+              <br />
             @endif
           @endforeach
         @endif
@@ -80,7 +82,7 @@
     @endif
 
     @if ($hero['description'] ?? null)
-      <p class="mx-auto mb-10 max-w-2xl font-sans text-md font-normal">
+      <p class="text-md mx-auto mb-10 max-w-2xl font-sans font-normal">
         {!! nl2br(e($hero['description'])) !!}
       </p>
     @endif
@@ -92,7 +94,11 @@
     @if ($filteredButtons->isNotEmpty())
       <div class="flex flex-wrap justify-center gap-4">
         @foreach ($filteredButtons as $button)
-          <x-button :color="$button['color'] ?? 'beige'" :href="$button['url']" active>
+          <x-button
+            :color="$button['color'] ?? 'beige'"
+            :href="$button['url']"
+            active
+          >
             {{ $button['label'] }}
           </x-button>
         @endforeach

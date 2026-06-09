@@ -1,4 +1,4 @@
-@props([
+@props ([
   'size' => 'default',
   'color' => 'black',
   'active' => false,

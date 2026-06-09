@@ -49,7 +49,12 @@ const Edit = ({ attributes, setAttributes }) => {
               <MediaUpload
                 onSelect={(media) =>
                   setAttributes({
-                    supporters: updateSupporter(supporters, index, 'logoId', media.id),
+                    supporters: updateSupporter(
+                      supporters,
+                      index,
+                      'logoId',
+                      media.id,
+                    ),
                   })
                 }
                 allowedTypes={['image']}
@@ -90,7 +95,9 @@ const Edit = ({ attributes, setAttributes }) => {
               variant="secondary"
               onClick={() =>
                 setAttributes({
-                  supporters: supporters.filter((_, itemIndex) => itemIndex !== index),
+                  supporters: supporters.filter(
+                    (_, itemIndex) => itemIndex !== index,
+                  ),
                 })
               }
             >
@@ -99,7 +106,10 @@ const Edit = ({ attributes, setAttributes }) => {
           </PanelBody>
         ))}
 
-        <PanelBody title={__('Soutiens', 'sage')} initialOpen={supporters.length === 0}>
+        <PanelBody
+          title={__('Soutiens', 'sage')}
+          initialOpen={supporters.length === 0}
+        >
           <Button
             variant="primary"
             onClick={() =>
