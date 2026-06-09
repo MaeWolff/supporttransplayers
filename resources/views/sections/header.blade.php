@@ -1,4 +1,4 @@
-<header class="sticky top-0 z-10 bg-white">
+<header class="sticky top-0 z-20 bg-white">
   <div class="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 py-4">
     <div aria-hidden="true"></div>
 

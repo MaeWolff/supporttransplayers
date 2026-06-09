@@ -44,6 +44,7 @@ class HeroData
         return [
             'title' => $attributes['title'] ?? '',
             'description' => $attributes['description'] ?? '',
+            'highlightWords' => $attributes['highlightWords'] ?? '',
             'buttons' => $buttons,
         ];
     }
@@ -57,6 +58,7 @@ class HeroData
         $attributes = [
             'title' => $hero['title'] ?? '',
             'description' => $hero['description'] ?? '',
+            'highlightWords' => $hero['highlightWords'] ?? '',
             'button1Label' => '',
             'button1Url' => '',
             'button1Color' => 'pink',
@@ -125,6 +127,7 @@ class HeroData
         return [
             'title' => 'Support Trans Players',
             'description' => '',
+            'highlightWords' => '',
             'buttons' => [],
         ];
     }

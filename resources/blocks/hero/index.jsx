@@ -66,6 +66,15 @@ const Edit = ({ attributes, setAttributes }) => {
             onChange={(value) => setAttributes({ description: value })}
             rows={4}
           />
+          <TextControl
+            label={__('Mots surlignés', 'sage')}
+            help={__(
+              'Saisissez les mots ou expressions à surligner en bleu, séparés par des virgules.',
+              'sage',
+            )}
+            value={attributes.highlightWords}
+            onChange={(value) => setAttributes({ highlightWords: value })}
+          />
         </PanelBody>
 
         <ButtonFields

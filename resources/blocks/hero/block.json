@@ -11,6 +11,7 @@
   "attributes": {
     "title": { "type": "string", "default": "" },
     "description": { "type": "string", "default": "" },
+    "highlightWords": { "type": "string", "default": "" },
     "button1Label": { "type": "string", "default": "" },
     "button1Url": { "type": "string", "default": "" },
     "button1Color": { "type": "string", "default": "pink" },
