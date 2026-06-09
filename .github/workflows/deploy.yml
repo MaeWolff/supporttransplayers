@@ -36,3 +36,10 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /public_html/wp-content/themes/supporttransplayers/
+          state-name: .deploy-state
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/package-lock.json
+            **/composer.lock
