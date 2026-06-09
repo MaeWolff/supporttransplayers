@@ -35,7 +35,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /supporttransplayers.org/wp-content/themes/supporttransplayers/
+          server-dir: /wp-content/themes/supporttransplayers/
           state-name: .deploy-state
           exclude: |
             **/.git*
