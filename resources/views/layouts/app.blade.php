@@ -8,9 +8,9 @@
 
   <link
     rel="preload"
-    href="{{ Vite::asset('resources/fonts/InstrumentSans-Regular.ttf') }}"
+    href="{{ Vite::asset('resources/fonts/InstrumentSans-Regular.woff2') }}"
     as="font"
-    type="font/ttf"
+    type="font/woff2"
     crossorigin
   />
   @vite (['resources/css/app.css', 'resources/js/app.js'])
