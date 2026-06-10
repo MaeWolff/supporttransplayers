@@ -1,5 +1,7 @@
-<section class="stp-hero group flex flex-col items-center px-6 py-16 md:py-24">
-  <div class="relative z-10 mx-auto max-w-4xl text-center">
+<section
+  class="stp-hero group flex w-full flex-col items-center overflow-x-clip px-6 py-16 md:py-24"
+>
+  <div class="relative z-10 mx-auto w-full max-w-4xl min-w-0 text-center">
     @if ($hero['title'] ?? null)
       @php
         $title = $hero['title'];
@@ -9,7 +11,7 @@
         $highlightIndex = 0;
       @endphp
       <h1
-        class="mb-6 font-display text-5xl leading-none text-neutral-black uppercase md:text-7xl"
+        class="mb-6 font-display text-4xl leading-[0.95] text-balance wrap-break-word text-neutral-black uppercase sm:text-5xl md:text-7xl"
       >
         @if ($phrases === [])
           {!! nl2br(e($title)) !!}
@@ -57,7 +59,9 @@
             @endphp
             @foreach ($segments as $segment)
               @if ($segment['highlight'])
-                <span class="relative inline whitespace-nowrap">
+                <span
+                  class="relative inline max-sm:whitespace-normal sm:whitespace-nowrap"
+                >
                   <span
                     class="absolute top-1 -left-1.5 -z-10 h-[0.9em] w-0 bg-brand-blue transition-[width] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.is-visible]:w-full in-[.editor-styles-wrapper]:w-full"
                     style="transition-delay: calc(200ms + {{ $highlightIndex }} * 120ms)"

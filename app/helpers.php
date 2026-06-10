@@ -41,6 +41,16 @@ if (! function_exists('stp_pll__')) {
     }
 }
 
+if (! function_exists('stp_font_uri')) {
+    /**
+     * Resolve a theme font URL from resources/fonts/.
+     */
+    function stp_font_uri(string $filename): string
+    {
+        return \App\font_uri($filename);
+    }
+}
+
 if (! function_exists('stp_pll_x')) {
     /**
      * Translate a string with context via Polylang when available.

@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import './fonts.css';
 @source '../../app/**/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';

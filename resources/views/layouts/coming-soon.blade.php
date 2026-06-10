@@ -8,7 +8,7 @@
 
   <link
     rel="preload"
-    href="{{ Vite::asset('resources/fonts/InstrumentSans-Regular.woff2') }}"
+    href="{{ stp_font_uri('InstrumentSans-Regular.woff2') }}"
     as="font"
     type="font/woff2"
     crossorigin

@@ -36,6 +36,8 @@ function manifest_asset_url(string $entry): ?string
  * @return array
  */
 add_filter('block_editor_settings_all', function ($settings) {
+    $settings['styles'][] = ['css' => font_faces_css()];
+
     try {
         $css = Vite::content('resources/css/editor.css');
     } catch (\Throwable) {
