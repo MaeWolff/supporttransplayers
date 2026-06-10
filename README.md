@@ -63,12 +63,14 @@ app/
   blocks.php             # Enregistrement des blocks Gutenberg
   helpers.php            # stp_pll__() / stp_pll_x() — i18n
   PolylangThemeStrings.php
-  Support/               # HeroData, SupportersData, LegalTextData
+  Support/               # HeroData, SupportersData, LegalTextData, NewsletterData, BentoData
   View/Composers/        # Données injectées dans les vues Blade
 resources/
   blocks/hero/           # Block Gutenberg → rendu Blade
   blocks/supporters/
   blocks/legal-text/
+  blocks/newsletter/
+  blocks/bento/
   views/                 # layouts/, sections/, partials/
   css/app.css            # Tailwind + design tokens (@theme)
   js/editor.js           # Enregistrement des blocks (admin)
@@ -96,8 +98,16 @@ the_content() sur le front
 | `stp/hero` | `resources/blocks/hero/` | `resources/views/sections/hero.blade.php` |
 | `stp/supporters` | `resources/blocks/supporters/` | `resources/views/sections/supporters.blade.php` |
 | `stp/legal-text` | `resources/blocks/legal-text/` | `resources/views/sections/legal-text.blade.php` → `<x-prose>` |
+| `stp/newsletter` | `resources/blocks/newsletter/` | `resources/views/sections/newsletter.blade.php` |
+| `stp/bento` | `resources/blocks/bento/` | `resources/views/sections/bento.blade.php` → `<x-bento-card>` |
+
+**Ordre home suggéré** — hero → bento → soutiens → newsletter.
+
+**Bento (hub campagne)** — block `stp/bento` : grille néobrutaliste de tuiles éditables (titre, texte, URL, couleur, taille). Contenu campagne par défaut (JO 2028, loi éthique, actions, sport inclusif). CTA lien en bas de tuile uniquement.
 
 **Page mentions légales** — template WordPress « Mentions légales » (`template-legal.blade.php`, sans page-header). Insérer le block `stp/legal-text` et rédiger en markdown (`#`, `##`, `###`, `[lien](url)`). Les liens sont rendus en gras bleu via `.stp-prose`.
+
+**Newsletter (v1 UI)** — block `stp/newsletter` : titre et labels via `stp_pll__()` (FR/EN). Formulaire e-mail + bouton néobrutaliste ; soumission désactivée côté JS en attendant le branchement d’un service (Brevo, Mailchimp, etc.).
 
 **Rédacteurs** — le contenu (titres, textes, boutons, logos) s’édite dans Gutenberg, bloc par bloc, page par page.
 

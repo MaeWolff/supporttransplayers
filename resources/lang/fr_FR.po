@@ -307,3 +307,82 @@ msgstr ""
 msgctxt "Font size name"
 msgid "7xl"
 msgstr ""
+
+#: resources/views/sections/newsletter.blade.php
+msgid "Restez à l'affût des dernières news"
+msgstr "Restez à l'affût des dernières news"
+
+#: resources/views/sections/newsletter.blade.php
+msgctxt "newsletter label"
+msgid "Adresse e-mail"
+msgstr "Adresse e-mail"
+
+#: resources/views/sections/newsletter.blade.php
+msgctxt "newsletter placeholder"
+msgid "Votre adresse e-mail"
+msgstr "Votre adresse e-mail"
+
+#: resources/views/sections/newsletter.blade.php
+msgid "S'inscrire"
+msgstr "S'inscrire"
+
+#: resources/blocks/newsletter/index.jsx
+msgid "Apparence"
+msgstr "Apparence"
+
+#: resources/blocks/newsletter/index.jsx
+msgid "Couleur du bouton"
+msgstr "Couleur du bouton"
+
+#: app/Support/BentoData.php
+#: resources/views/components/bento-card.blade.php
+msgid "En savoir plus"
+msgstr "En savoir plus"
+
+#: resources/blocks/bento/index.jsx
+msgid "Section"
+msgstr "Section"
+
+#: resources/blocks/bento/index.jsx
+msgid "Titre de section"
+msgstr "Titre de section"
+
+#: resources/blocks/bento/index.jsx
+msgid "Tuile"
+msgstr "Tuile"
+
+#: resources/blocks/bento/index.jsx
+msgid "Texte"
+msgstr "Texte"
+
+#: resources/blocks/bento/index.jsx
+msgid "Label du lien"
+msgstr "Label du lien"
+
+#: resources/blocks/bento/index.jsx
+msgid "Laisser vide pour « En savoir plus »."
+msgstr "Laisser vide pour « En savoir plus »."
+
+#: resources/blocks/bento/index.jsx
+msgid "Grande"
+msgstr "Grande"
+
+#: resources/blocks/bento/index.jsx
+msgid "Moyenne"
+msgstr "Moyenne"
+
+#: resources/blocks/bento/index.jsx
+msgid "Petite"
+msgstr "Petite"
+
+#: resources/blocks/bento/index.jsx
+msgid "Blanc"
+msgstr "Blanc"
+
+#: resources/blocks/bento/index.jsx
+msgid "Tuiles"
+msgstr "Tuiles"
+
+#: resources/blocks/bento/index.jsx
+msgid "Ajouter une tuile"
+msgstr "Ajouter une tuile"

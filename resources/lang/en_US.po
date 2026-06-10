@@ -307,3 +307,82 @@ msgstr "5xl"
 msgctxt "Font size name"
 msgid "7xl"
 msgstr "7xl"
+
+#: resources/views/sections/newsletter.blade.php
+msgid "Restez à l'affût des dernières news"
+msgstr "Stay up to date with the latest news"
+
+#: resources/views/sections/newsletter.blade.php
+msgctxt "newsletter label"
+msgid "Adresse e-mail"
+msgstr "Email address"
+
+#: resources/views/sections/newsletter.blade.php
+msgctxt "newsletter placeholder"
+msgid "Votre adresse e-mail"
+msgstr "Your email address"
+
+#: resources/views/sections/newsletter.blade.php
+msgid "S'inscrire"
+msgstr "Subscribe"
+
+#: resources/blocks/newsletter/index.jsx
+msgid "Apparence"
+msgstr "Appearance"
+
+#: resources/blocks/newsletter/index.jsx
+msgid "Couleur du bouton"
+msgstr "Button color"
+
+#: app/Support/BentoData.php
+#: resources/views/components/bento-card.blade.php
+msgid "En savoir plus"
+msgstr "Learn more"
+
+#: resources/blocks/bento/index.jsx
+msgid "Section"
+msgstr "Section"
+
+#: resources/blocks/bento/index.jsx
+msgid "Titre de section"
+msgstr "Section title"
+
+#: resources/blocks/bento/index.jsx
+msgid "Tuile"
+msgstr "Tile"
+
+#: resources/blocks/bento/index.jsx
+msgid "Texte"
+msgstr "Text"
+
+#: resources/blocks/bento/index.jsx
+msgid "Label du lien"
+msgstr "Link label"
+
+#: resources/blocks/bento/index.jsx
+msgid "Laisser vide pour « En savoir plus »."
+msgstr "Leave empty for \"Learn more\"."
+
+#: resources/blocks/bento/index.jsx
+msgid "Grande"
+msgstr "Large"
+
+#: resources/blocks/bento/index.jsx
+msgid "Moyenne"
+msgstr "Medium"
+
+#: resources/blocks/bento/index.jsx
+msgid "Petite"
+msgstr "Small"
+
+#: resources/blocks/bento/index.jsx
+msgid "Blanc"
+msgstr "White"
+
+#: resources/blocks/bento/index.jsx
+msgid "Tuiles"
+msgstr "Tiles"
+
+#: resources/blocks/bento/index.jsx
+msgid "Ajouter une tuile"
+msgstr "Add a tile"

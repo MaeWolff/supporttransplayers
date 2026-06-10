@@ -9,7 +9,7 @@
         $highlightIndex = 0;
       @endphp
       <h1
-        class="mb-6 font-display text-4xl leading-tight text-neutral-black uppercase md:text-7xl md:leading-none"
+        class="mb-6 font-display text-5xl leading-none text-neutral-black uppercase md:text-7xl"
       >
         @if ($phrases === [])
           {!! nl2br(e($title)) !!}

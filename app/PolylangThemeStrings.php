@@ -31,6 +31,9 @@ add_action('init', function () {
         '&larr; Older comments',
         'Newer comments &rarr;',
         'One',
+        'Restez à l\'affût des dernières news',
+        'S\'inscrire',
+        'En savoir plus',
     ];
 
     foreach ($strings as $string) {
@@ -40,4 +43,6 @@ add_action('init', function () {
     pll_register_string('Search for:', 'Search for:', 'sage', false);
     pll_register_string('Search …', 'Search &hellip;', 'sage', false);
     pll_register_string('Search submit', 'Search', 'sage', false);
+    pll_register_string('newsletter placeholder', 'Votre adresse e-mail', 'sage', false);
+    pll_register_string('newsletter label', 'Adresse e-mail', 'sage', false);
 }, 20);

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "stp/newsletter",
+  "title": "Newsletter",
+  "category": "theme",
+  "icon": "email",
+  "keywords": ["newsletter", "email", "inscription", "subscribe"],
+  "description": "Section newsletter avec champ e-mail et bouton d'inscription.",
+  "textdomain": "sage",
+  "attributes": {
+    "buttonColor": {
+      "type": "string",
+      "default": "pink"
+    }
+  },
+  "supports": {
+    "html": false,
+    "multiple": true,
+    "reusable": true
+  },
+  "render": "file:./render.php"
+}

@@ -33,4 +33,21 @@ const initHeroHighlights = () => {
   });
 };
 
-document.addEventListener('DOMContentLoaded', initHeroHighlights);
+const initNewsletterForms = () => {
+  document.querySelectorAll('.stp-newsletter-form').forEach((form) => {
+    if (form.dataset.newsletterReady === 'true') {
+      return;
+    }
+
+    form.dataset.newsletterReady = 'true';
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+    });
+  });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  initHeroHighlights();
+  initNewsletterForms();
+});
