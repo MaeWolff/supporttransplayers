@@ -34,6 +34,8 @@ add_action('init', function () {
         'Restez à l\'affût des dernières news',
         'S\'inscrire',
         'En savoir plus',
+        'Campagne en cours de construction',
+        'Notre site arrive bientôt. Merci de votre patience.',
     ];
 
     foreach ($strings as $string) {

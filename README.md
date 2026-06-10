@@ -109,6 +109,17 @@ the_content() sur le front
 
 **Newsletter (v1 UI)** — block `stp/newsletter` : titre et labels via `stp_pll__()` (FR/EN). Formulaire e-mail + bouton néobrutaliste ; soumission désactivée côté JS en attendant le branchement d’un service (Brevo, Mailchimp, etc.).
 
+### Mode en construction
+
+Pendant le développement du site, activer **Apparence → En construction** :
+
+1. Créer une page avec le template **En construction** (`template-coming-soon.blade.php`)
+2. Y insérer le block `stp/hero` (titre, description, mots surlignés)
+3. Lier la traduction EN via Polylang
+4. Sélectionner la page FR et cocher **Activer**
+
+Les visiteurs anonymes sont redirigés (302) vers cette page. Les utilisateurs avec la capacité `edit_posts` (éditeurs et administrateurs) voient le site complet. Bandeau fixe via `<x-construction-notice />`.
+
 **Rédacteurs** — le contenu (titres, textes, boutons, logos) s’édite dans Gutenberg, bloc par bloc, page par page.
 
 **Développeurs** — le markup vit dans Blade ; la config du block dans `block.json` ; l’UI éditeur dans `index.jsx` ; la normalisation des attributs dans `app/Support/*Data.php`.

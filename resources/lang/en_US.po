@@ -386,3 +386,43 @@ msgstr "Tiles"
 #: resources/blocks/bento/index.jsx
 msgid "Ajouter une tuile"
 msgstr "Add a tile"
+
+#: resources/views/components/construction-notice.blade.php
+msgid "Campagne en cours de construction"
+msgstr "Campaign under construction"
+
+#: resources/views/components/construction-notice.blade.php
+msgid "Notre site arrive bientôt. Merci de votre patience."
+msgstr "Our site is coming soon. Thank you for your patience."
+
+#: app/ComingSoon.php
+msgid "En construction"
+msgstr "Coming soon"
+
+#: app/ComingSoon.php
+msgid "Mode en construction"
+msgstr "Coming soon mode"
+
+#: app/ComingSoon.php
+msgid "Les visiteurs non connectés sont redirigés vers la page sélectionnée. Les éditeurs et administrateurs voient le site complet."
+msgstr "Logged-out visitors are redirected to the selected page. Editors and administrators can browse the full site."
+
+#: app/ComingSoon.php
+msgid "Activer"
+msgstr "Enable"
+
+#: app/ComingSoon.php
+msgid "Rediriger les visiteurs vers la page en construction"
+msgstr "Redirect visitors to the coming soon page"
+
+#: app/ComingSoon.php
+msgid "Page en construction (FR)"
+msgstr "Coming soon page (FR)"
+
+#: app/ComingSoon.php
+msgid "— Sélectionner —"
+msgstr "— Select —"
+
+#: app/ComingSoon.php
+msgid "Utilisez le template « En construction ». Liez la traduction EN via Polylang."
+msgstr "Use the \"Coming soon\" template. Link the EN translation via Polylang."
