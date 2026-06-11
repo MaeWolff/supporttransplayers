@@ -28,6 +28,24 @@
     @apply inline-flex items-center justify-center border-2 border-neutral-black font-display font-black tracking-wide uppercase shadow-neo transition-all duration-150 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-neo-sm focus-visible:ring-2 focus-visible:ring-neutral-black focus-visible:ring-offset-2 focus-visible:outline-none active:translate-x-1 active:translate-y-1 active:shadow-none;
   }
 
+  .stp-hero-highlight {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    background-image: linear-gradient(
+      var(--color-brand-blue),
+      var(--color-brand-blue)
+    );
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0% 1em;
+    transition: background-size 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .stp-hero.is-visible .stp-hero-highlight,
+  .editor-styles-wrapper .stp-hero-highlight {
+    background-size: 100% 1em;
+  }
+
   .stp-prose h1 {
     @apply font-display text-4xl leading-tight text-neutral-black uppercase md:text-5xl;
   }

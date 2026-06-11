@@ -60,18 +60,10 @@
             @foreach ($segments as $segment)
               @if ($segment['highlight'])
                 <span
-                  class="relative inline max-sm:whitespace-normal sm:whitespace-nowrap"
+                  class="stp-hero-highlight box-decoration-clone px-0.5"
+                  style="transition-delay: calc(200ms + {{ $highlightIndex }} * 120ms)"
+                  >{{ $segment['text'] }}</span
                 >
-                  <span
-                    class="absolute top-1 -left-1.5 -z-10 h-[0.9em] w-0 bg-brand-blue transition-[width] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-[.is-visible]:w-full in-[.editor-styles-wrapper]:w-full"
-                    style="transition-delay: calc(200ms + {{ $highlightIndex }} * 120ms)"
-                    aria-hidden="true"
-                  ></span>
-                  <span
-                    class="relative z-10 px-0.5"
-                    >{{ $segment['text'] }}</span
-                  >
-                </span>
                 @php $highlightIndex++; @endphp
               @else
                 {{ $segment['text'] }}
