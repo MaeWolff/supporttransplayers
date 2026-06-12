@@ -51,6 +51,49 @@ if (! function_exists('stp_font_uri')) {
     }
 }
 
+if (! function_exists('stp_nav_menu_tree')) {
+    /**
+     * Build a hierarchical tree of nav menu items for a theme location.
+     *
+     * @return array<int, \WP_Post>
+     */
+    function stp_nav_menu_tree(string $location): array
+    {
+        $locations = get_nav_menu_locations();
+
+        if (! isset($locations[$location])) {
+            return [];
+        }
+
+        $items = wp_get_nav_menu_items((int) $locations[$location]);
+
+        if (! is_array($items) || $items === []) {
+            return [];
+        }
+
+        $indexed = [];
+
+        foreach ($items as $item) {
+            $item->children = [];
+            $indexed[$item->ID] = $item;
+        }
+
+        $tree = [];
+
+        foreach ($items as $item) {
+            $parentId = (int) $item->menu_item_parent;
+
+            if ($parentId !== 0 && isset($indexed[$parentId])) {
+                $indexed[$parentId]->children[] = $item;
+            } else {
+                $tree[] = $item;
+            }
+        }
+
+        return $tree;
+    }
+}
+
 if (! function_exists('stp_pll_x')) {
     /**
      * Translate a string with context via Polylang when available.

@@ -2,7 +2,9 @@
   <div
     class="mx-auto grid max-w-7xl grid-cols-[1fr_auto_1fr] items-start px-6 py-4"
   >
-    <div aria-hidden="true"></div>
+    <div class="flex justify-start">
+      <x-burger-menu />
+    </div>
 
     <a
       href="{{ function_exists('pll_home_url') ? pll_home_url() : home_url('/') }}"

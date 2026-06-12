@@ -1,3 +1,5 @@
+import { initBurgerMenus } from './burger-menu.js';
+
 const initHeroHighlights = () => {
   document.querySelectorAll('.stp-hero').forEach((hero) => {
     if (hero.dataset.heroReady === 'true') {
@@ -50,4 +52,5 @@ const initNewsletterForms = () => {
 document.addEventListener('DOMContentLoaded', () => {
   initHeroHighlights();
   initNewsletterForms();
+  initBurgerMenus();
 });
