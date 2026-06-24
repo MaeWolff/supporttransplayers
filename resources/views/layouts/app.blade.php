@@ -19,14 +19,14 @@
 <body @php (body_class('text-neutral-black font-sans bg-white'))>
   @php (wp_body_open())
 
-  <div id="app">
+  <div id="app" class="flex min-h-screen flex-col">
     <a class="sr-only focus:not-sr-only" href="#main">
       {{ stp_pll__('Skip to content') }}
     </a>
 
     @include ('sections.header')
 
-    <main id="main" class="main">
+    <main id="main" class="main flex-1">
       @yield ('content')
     </main>
 

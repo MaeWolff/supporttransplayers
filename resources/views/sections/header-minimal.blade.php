@@ -19,17 +19,8 @@
     </a>
 
     @if (function_exists('pll_the_languages'))
-      <div class="flex w-16 shrink-0 justify-end gap-4">
-        @foreach (pll_the_languages(['raw' => 1]) as $lang)
-          <x-button
-            size="sm"
-            :color="$lang['current_lang'] ? 'blue' : 'beige'"
-            :href="$lang['url']"
-            :active="(bool) $lang['current_lang']"
-          >
-            {{ strtoupper($lang['slug']) }}
-          </x-button>
-        @endforeach
+      <div class="flex justify-end">
+        <x-language-switcher />
       </div>
     @else
       <div class="w-16 shrink-0" aria-hidden="true"></div>

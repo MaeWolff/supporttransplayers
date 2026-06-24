@@ -159,6 +159,7 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => stp_pll__('Primary Navigation'),
+        'footer_navigation' => stp_pll__('Footer Navigation'),
     ]);
 
     /**
@@ -240,10 +241,5 @@ add_action('widgets_init', function () {
     register_sidebar([
         'name' => stp_pll__('Primary'),
         'id' => 'sidebar-primary',
-    ] + $config);
-
-    register_sidebar([
-        'name' => stp_pll__('Footer'),
-        'id' => 'sidebar-footer',
     ] + $config);
 });

@@ -1,6 +1,6 @@
 @php
   $menuItems = stp_nav_menu_tree('primary_navigation');
-  $contactEmail = 'contact@supporttransplayers.org';
+  $contactEmail = $footer['contactEmail'] ?? 'contact@supporttransplayers.org';
 @endphp
 
 <div class="relative z-50" data-stp-burger>

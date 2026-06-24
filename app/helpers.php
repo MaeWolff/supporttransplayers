@@ -111,3 +111,21 @@ if (! function_exists('stp_pll_x')) {
         return _x($text, $context, 'sage');
     }
 }
+
+if (! function_exists('stp_languages')) {
+    /**
+     * Polylang language list for the theme language switcher.
+     *
+     * @return array<int, array<string, mixed>>
+     */
+    function stp_languages(): array
+    {
+        if (! function_exists('pll_the_languages')) {
+            return [];
+        }
+
+        $languages = pll_the_languages(['raw' => 1]);
+
+        return is_array($languages) ? array_values($languages) : [];
+    }
+}

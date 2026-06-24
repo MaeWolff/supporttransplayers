@@ -73,4 +73,22 @@
   .stp-prose ol {
     @apply mt-4 list-decimal space-y-2 pl-6 font-sans text-base leading-relaxed text-neutral-black;
   }
+
+  .stp-footer-credit {
+    text-wrap: pretty;
+  }
+
+  .stp-footer-link {
+    @apply inline-flex cursor-pointer items-center border-2 border-transparent px-1 py-0.5 font-sans text-sm font-bold text-neutral-black no-underline transition-[color,background-color,border-color,box-shadow,transform] duration-150 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:border-neutral-black hover:bg-brand-pink hover:shadow-neo-sm focus-visible:ring-2 focus-visible:ring-neutral-black focus-visible:ring-offset-2 focus-visible:outline-none active:translate-x-0 active:translate-y-0 active:shadow-none;
+  }
+
+  .stp-footer-link-inline {
+    @apply cursor-pointer font-bold text-neutral-black underline decoration-1 underline-offset-4 transition-[color,background-color,text-decoration-color] duration-150 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-brand-pink hover:decoration-2 focus-visible:rounded-sm focus-visible:ring-2 focus-visible:ring-neutral-black focus-visible:ring-offset-2 focus-visible:outline-none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stp-footer-link {
+      @apply transition-[color,background-color,border-color] duration-150 hover:translate-x-0 hover:translate-y-0 active:translate-x-0 active:translate-y-0;
+    }
+  }
 }
