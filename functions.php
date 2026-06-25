@@ -52,7 +52,7 @@ Application::configure()
 |
 */
 
-collect(['setup', 'filters', 'blocks', 'Fonts', 'PolylangThemeStrings', 'ComingSoon', 'Footer'])
+collect(['setup', 'filters', 'blocks', 'Fonts', 'PolylangThemeStrings', 'ComingSoon', 'Footer', 'Downloads/KitDownload', 'Sync/TranslatedBlockSync'])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(

@@ -41,6 +41,8 @@ add_action('init', function () {
         'En savoir plus',
         'Campagne en cours de construction',
         'Notre site arrive bientôt. Merci de votre patience.',
+        'Télécharger le kit complet',
+        'Télécharger',
     ];
 
     foreach ($strings as $string) {

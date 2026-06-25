@@ -3,3 +3,5 @@ import '../blocks/supporters/index.jsx';
 import '../blocks/legal-text/index.jsx';
 import '../blocks/newsletter/index.jsx';
 import '../blocks/bento/index.jsx';
+import '../blocks/kit/index.jsx';
+import '../blocks/resources/index.jsx';

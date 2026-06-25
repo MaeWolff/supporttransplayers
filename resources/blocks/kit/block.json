@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "stp/kit",
+  "title": "Kit",
+  "category": "theme",
+  "icon": "download",
+  "keywords": ["kit", "téléchargement", "zip", "slides", "instagram"],
+  "description": "Pack média téléchargeable multilingue : aperçu en grille et archive ZIP par langue.",
+  "textdomain": "sage",
+  "attributes": {
+    "locales": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "supports": {
+    "html": false,
+    "multiple": false,
+    "reusable": false
+  },
+  "render": "file:./render.php"
+}

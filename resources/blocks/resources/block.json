@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "stp/resources",
+  "title": "Ressources",
+  "category": "theme",
+  "icon": "media-document",
+  "keywords": ["ressources", "documents", "pdf", "téléchargement", "fichiers"],
+  "description": "Liste de ressources téléchargeables multilingues (PDF, images, vidéos, etc.).",
+  "textdomain": "sage",
+  "attributes": {
+    "locales": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "supports": {
+    "html": false,
+    "multiple": true,
+    "reusable": true
+  },
+  "render": "file:./render.php"
+}
