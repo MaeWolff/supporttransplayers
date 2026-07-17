@@ -32,7 +32,11 @@ class MediaAttachmentData
         $thumbUrl = null;
 
         if ($isImage) {
-            $thumb = wp_get_attachment_image_src($attachmentId, 'medium');
+            $thumb = wp_get_attachment_image_src($attachmentId, 'large');
+
+            if (! is_array($thumb) || ! isset($thumb[0])) {
+                $thumb = wp_get_attachment_image_src($attachmentId, 'full');
+            }
 
             if (is_array($thumb) && isset($thumb[0])) {
                 $thumbUrl = $thumb[0];

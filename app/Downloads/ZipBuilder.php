@@ -171,11 +171,19 @@ class ZipBuilder
         $post = get_post($postId);
         $slug = $post instanceof \WP_Post ? $post->post_name : 'kit';
 
+        if ($slug === '') {
+            $slug = 'kit';
+        }
+
         if (! BlockLocales::isValid($lang)) {
             $lang = BlockLocales::default();
         }
 
-        return 'kit-'.$slug.'-'.$lang;
+        $base = ($slug === 'kit' || str_starts_with($slug, 'kit-'))
+            ? $slug
+            : 'kit-'.$slug;
+
+        return $base.'-'.$lang;
     }
 
     /**
