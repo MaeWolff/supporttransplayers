@@ -1,4 +1,5 @@
 import { initBurgerMenus } from './burger-menu.js';
+import { initLanguageSwitchers } from './language-switcher.js';
 
 const initHeroHighlights = () => {
   document.querySelectorAll('.stp-hero').forEach((hero) => {
@@ -53,4 +54,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroHighlights();
   initNewsletterForms();
   initBurgerMenus();
+  initLanguageSwitchers();
 });
